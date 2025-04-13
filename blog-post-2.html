@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Designing Responsive Portfolio Cards with CSS Grid - Mahad Ahmad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll Progress -->
+    <div id="progress-bar"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-bar"></div>
+        <p>Loading Post...</p>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">Mahad Ahmad</div>
+        <ul class="nav-links">
+           
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="project-details.html">Projects</a></li>
+            
+          <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.pdf" target="_blank" class="resume-nav">View Resume</a></li>
+            
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <!-- Blog Post Section -->
+    <section id="blog-post">
+        <div class="post-container">
+            <h2>Designing Responsive Portfolio Cards with CSS Grid</h2>
+            <img src="assets/portfolio-cards.jpg" alt="Portfolio Cards" loading="lazy" class="post-img">
+            <div class="post-content">
+                <p>April 19, 2025</p>
+                <p>Creating clean, aligned cards for my portfolio was a game-changer. I used CSS Grid to build responsive layouts for my Projects and Blog pages. Here’s my process.</p>
+                <p><strong>Why CSS Grid?</strong> Grid offers precise control over rows and columns, perfect for card layouts. I set up a container with <code>display: grid; grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));</code> to ensure cards adapt to screen sizes while staying big and balanced.</p>
+                <p><strong>Card Design:</strong> Each card stacks an image, title, text, and button using <code>flex-direction: column</code>. I added glassmorphism with <code>backdrop-filter: blur(10px)</code> for a sleek look, matching my portfolio’s vibe. Images are capped at <code>max-width: 600px</code> to keep things bold but not overwhelming.</p>
+                <p><strong>Responsiveness:</strong> On mobile, Grid stacks cards vertically with <code>grid-template-columns: 1fr</code>. I tweaked font sizes (e.g., <code>2rem</code> to <code>1.5rem</code>) and padding for smaller screens, testing on devices to ensure no overlap.</p>
+                <p><strong>Challenges:</strong> Early layouts had uneven gaps. I fixed this with <code>gap: 2rem</code> and centered cards using <code>place-items: center</code>. Another issue was image scaling—I used <code>object-fit: cover</code> to prevent stretching, inspired by X posts on responsive design.</p>
+                <p><strong>Tip for Devs:</strong> Plan your grid early and test across breakpoints. Use DevTools to catch alignment issues. See my <a href="index.html#projects">Projects page</a> for the result!</p>
+                <a href="blog.html" class="btn">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wave"></div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/mahadahmad44" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:your.email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+        </div>
+        <p>© 2025 Mahad Ahmad. Built with 🚀 & 🎨. <span id="live-clock"></span></p>
+        <button id="back-to-top" class="btn">↑ Top</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

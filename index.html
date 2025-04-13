@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mahad Ahmad - Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll Progress -->
+    <div id="progress-bar"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-bar"></div>
+        <p>Loading Portfolio...</p>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">Mahad Ahmad</div>
+        <ul class="nav-links">
+           
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="project-details.html">Projects</a></li>
+            
+          <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.pdf" target="_blank" class="resume-nav">View Resume</a></li>
+            
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <!-- Hero Section -->
+    <section id="home" class="parallax">
+        <div class="hero-content">
+            <h1>Hi, I'm Mahad Ahmad</h1>
+            <p>I’m a <span id="typing-text"></span></p>
+            <a href="resume.pdf" target="_blank" class="btn">View Resume</a>
+        </div>
+    </section>
+
+    <!-- Skills Showcase Section -->
+    <section id="skills">
+        <h2>My Skills</h2>
+        <div class="skills-container">
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fab fa-html5"></i>
+                    <h3>HTML</h3>
+                    <p>Building semantic, accessible web structures for modern sites like my portfolio.</p>
+                    <a href="project-details.html" class="btn">See Projects</a>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-css3-alt"></i>
+                    <h3>CSS</h3>
+                    <p>Crafting responsive, neon-glassy designs with animations for sleek UIs.</p>
+                    <a href="project-details.html" class="btn">See Projects</a>
+                </div>
+                <div class="skill-card">
+                    <i class="fab fa-js"></i>
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity, like my banking app’s dynamic frontend.</p>
+                    <a href="project-details.html" class="btn">See Projects</a>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-paint-brush"></i>
+                    <p>Creating user-friendly interfaces with modern trends like glassmorphism.</p>
+                    <a href="services.html" class="btn">See Services</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="parallax">
+        <h2>All Projects</h2>
+        <div class="filter-buttons">
+            <button class="filter-btn active" data-filter="all">All</button>
+            <button class="filter-btn" data-filter="web">Web</button>
+            <button class="filter-btn" data-filter="app">App</button>
+        </div>
+        <div class="project-grid">
+            <div class="project-card" data-category="web">
+                <img src="assets/portfolio.jpg" alt="Portfolio" loading="lazy">
+                <div class="project-content">
+                    <h3>Ultra Portfolio</h3>
+                    <p>Multi-page site with animations and filters, built to showcase my skills.</p>
+                    <a href="project-details.html#portfolio" class="btn">View Details</a>
+                </div>
+            </div>
+            <div class="project-card" data-category="app">
+                <img src="assets/banking.jpg" alt="Banking App" loading="lazy">
+                <div class="project-content">
+                    <h3>Banking App</h3>
+                    <p>Responsive frontend for banking tasks, focusing on user experience.</p>
+                    <a href="project-details.html#banking-app" class="btn">View Details</a>
+                </div>
+            </div>
+         
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wave"></div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/mahadahmad44" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:your.email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a>
+            <a href="#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+        </div>
+        <p>© 2025 Mahad Ahmad. Built with 🚀 & 🎨. <span id="live-clock"></span></p>
+        <button id="back-to-top" class="btn">↑ Top</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

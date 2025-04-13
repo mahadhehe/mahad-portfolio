@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building a Secure Login System with PHP and MySQL - Mahad Ahmad</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <!-- Scroll Progress -->
+    <div id="progress-bar"></div>
+
+    <!-- Loading Screen -->
+    <div id="loader">
+        <div class="loader-bar"></div>
+        <p>Loading Post...</p>
+    </div>
+
+    <!-- Particle Background -->
+    <div id="particles-js"></div>
+
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+
+    <!-- Navbar -->
+    <nav id="navbar">
+        <div class="logo">Mahad Ahmad</div>
+        <ul class="nav-links">
+           
+            <li><a href="index.html">Home</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="project-details.html">Projects</a></li>
+            
+          <li><a href="contact.html">Contact</a></li>
+            <li><a href="resume.pdf" target="_blank" class="resume-nav">View Resume</a></li>
+            
+        </ul>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+
+    <!-- Blog Post Section -->
+    <section id="blog-post">
+        <div class="post-container">
+            <h2>Building a Secure Login System with PHP and MySQL</h2>
+            <img src="assets/login-system.jpg" alt="Login System" loading="lazy" class="post-img">
+            <div class="post-content">
+                <p>April 19, 2025</p>
+                <p>One of the core features of my Banking Website was a secure login system. Protecting user data is critical, so I used PHP and MySQL to build a robust authentication flow. Here’s how I did it.</p>
+                <p><strong>Database Setup:</strong> I created a MySQL database via phpMyAdmin, with a <code>users</code> table storing IDs, emails, and hashed passwords. Using prepared statements, I ensured queries were safe from SQL injection. For example, inserting a new user looked like <code>$stmt->bind_param("ss", $email, $hash);</code>.</p>
+                <p><strong>PHP Logic:</strong> On the backend, I wrote PHP scripts to handle registration and login. For registration, I used <code>password_hash()</code> to store passwords securely. For login, <code>password_verify()</code> checked credentials against the database. Sessions tracked logged-in users, with timeouts for added security.</p>
+                <p><strong>Frontend:</strong> The login form used HTML and CSS for a clean, responsive design, with JavaScript to validate inputs before submission. I added feedback like “Invalid email” to improve UX, keeping it consistent with my portfolio’s glassmorphism style.</p>
+                <p><strong>Challenges:</strong> Early on, I hit issues with session management—users stayed logged in too long. I fixed this by setting a 30-minute session expiry. Another hurdle was securing AJAX calls for form submission, which I solved with CSRF tokens after reading X posts on web security.</p>
+                <p><strong>Tip for Devs:</strong> Always hash passwords and use prepared statements. Test edge cases, like duplicate emails, early on. This system powers my <a href="project-details.html#banking-website">Banking Website</a>—check it out!</p>
+                <a href="blog.html" class="btn">Back to Blog</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="wave"></div>
+        <div class="social-icons">
+            <a href="https://linkedin.com/in/mahadahmad44" class="social-icon"><i class="fab fa-linkedin"></i></a>
+            <a href="https://github.com/yourusername" class="social-icon"><i class="fab fa-github"></i></a>
+            <a href="mailto:your.email@example.com" class="social-icon"><i class="fas fa-envelope"></i></a>
+        </div>
+        <div class="footer-links">
+            <a href="blog.html">Blog</a>
+            <a href="services.html">Services</a>
+            <a href="index.html#projects">Projects</a>
+            <a href="contact.html">Contact</a>
+            <a href="resume.pdf" target="_blank">Resume</a>
+        </div>
+        <p>© 2025 Mahad Ahmad. Built with 🚀 & 🎨. <span id="live-clock"></span></p>
+        <button id="back-to-top" class="btn">↑ Top</button>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
