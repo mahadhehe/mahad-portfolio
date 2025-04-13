@@ -623,10 +623,10 @@ body.dark .project-card h3 {
     align-items: center;
     gap: 1.5rem;
     padding: 2rem;
-    background: rgba(255, 255, 255, 0.1); /* Glassmorphism */
+    background: rgba(255, 255, 255, 0.1);
     border-radius: 15px;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    max-width: 700px;
+    max-width: 750px; /* Adjusted for 650px slider */
     margin: 2rem auto;
   }
 
@@ -1104,31 +1104,34 @@ body.dark #skills h2 {
 .slider {
     position: relative;
     width: 100%;
-    max-width: 600px; /* Matches card width */
+    max-width: 650px; /* Slightly larger than original 600px */
     margin: 0 auto;
     overflow: hidden;
     border-radius: 10px;
-    backdrop-filter: blur(10px); /* Glassmorphism */
+    backdrop-filter: blur(10px); /* Original glassmorphism */
     border: 1px solid rgba(255, 255, 255, 0.2);
   }
   
   .slides {
     display: flex;
     transition: transform 0.5s ease-in-out;
+    width: 100%;
   }
   
   .slide {
     width: 100%;
-    height: auto;
-    object-fit: cover;
+    height: auto; /* Auto height for 1915×905px */
+    object-fit: contain; /* Show full image, no crop */
+    object-position: center;
     flex-shrink: 0;
+    display: block; /* Ensure proper rendering */
   }
   
   .prev, .next {
     position: absolute;
     top: 50%;
     transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent */
+    background: rgba(0, 0, 0, 0.5);
     color: #fff;
     border: none;
     padding: 10px;
@@ -1153,6 +1156,10 @@ body.dark #skills h2 {
   @media (max-width: 768px) {
     .slider {
       max-width: 100%;
+    }
+    .slide {
+      height: auto;
+      object-fit: contain;
     }
     .prev, .next {
       padding: 8px;
