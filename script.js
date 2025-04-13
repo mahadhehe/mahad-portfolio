@@ -181,3 +181,33 @@ if (document.getElementById('contact-form')) {
         }
     });
 }
+// Slider Functionality
+document.querySelectorAll('.slider').forEach(slider => {
+    const slides = slider.querySelector('.slides');
+    const slideImages = slider.querySelectorAll('.slide');
+    const prevBtn = slider.querySelector('.prev');
+    const nextBtn = slider.querySelector('.next');
+    let currentIndex = 0;
+  
+    function showSlide(index) {
+      if (index >= slideImages.length) {
+        currentIndex = 0;
+      } else if (index < 0) {
+        currentIndex = slideImages.length - 1;
+      } else {
+        currentIndex = index;
+      }
+      slides.style.transform = `translateX(-${currentIndex * 100}%)`;
+    }
+  
+    prevBtn.addEventListener('click', () => {
+      showSlide(currentIndex - 1);
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      showSlide(currentIndex + 1);
+    });
+  
+    // Initialize first slide
+    showSlide(0);
+  });
